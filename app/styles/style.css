@@ -23,7 +23,7 @@ body a{
 /*----start-header----*/
 .header{
 	background:#fff;
-	padding: 2em 0;
+/*	padding: 2em 0;*/
 }
 .logo{
 	float:left;
@@ -148,7 +148,7 @@ body a{
 }
 .banner-info h1 {
 	font-size: 2.5em;
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	line-height: 1.4em;
 	margin: 0em;
@@ -157,7 +157,7 @@ body a{
 	letter-spacing: 3px;
 }
 .banner-info p {
-	color: #fff;
+	color: #000;
 	font-size: 1em;
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;

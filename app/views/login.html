@@ -14,7 +14,10 @@
     <label for="loginConfirm">confirm pass</label>
     <input id="loginConfirm" required name="confirm" type="password" ng-model="confirm" class="form-control" />
   </p>
-
+  <p class="form-group" ng-cloak ng-show="createMode">
+    <label for="loginFname">First Name</label>
+    <input id="loginFname" required name="fname" type="text" ng-model="fname" class="form-control" />
+  </p>
   <p>
     <button  class="btn btn-primary" ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
     <button  class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>

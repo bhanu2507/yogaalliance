@@ -11,17 +11,14 @@ angular.module('yogafireApp')
     $scope.user = user;
     $scope.logout = function() { Auth.$unauth(); };
     $scope.messages = [];
-    var authData =  Auth.$getAuth();
-    var profile = authData.password;
-    $scope.profile = profile;
+  //  var authData =  Auth.$getAuth();
+  //  var profile = authData.password;
+  //  $scope.profile = profile;
 
 
    // var profile = $firebaseObject(Ref.child('users/'+user.uid));
-   // profile.$bindTo($scope, 'profile').then(function() {
-   //   console.log($scope.profile); // { foo: "bar" }
-     // $scope.data.foo = "baz";  // will be saved to the database
-     // ref.set({ foo: "baz" });  // this would update the database and $scope.data
-   // });
+    var profile = $firebaseObject(Ref.child('users/' + user.uid));
+    profile.$bindTo($scope, 'profile');
    // console.log(profile.email);
 
     $scope.changePassword = function(oldPass, newPass, confirm) {
