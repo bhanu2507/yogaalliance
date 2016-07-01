@@ -15,7 +15,7 @@ angular.module('yogafireApp')
       );
     };
 
-    $scope.createAccount = function(email, pass, confirm) {
+    $scope.createAccount = function(email, pass, confirm, fname) {
       $scope.err = null;
       if( !pass ) {
         $scope.err = 'Please enter a password';
@@ -34,8 +34,9 @@ angular.module('yogafireApp')
       }
 
       function createProfile(user) {
-        var ref = Ref.child('users', user.uid), def = $q.defer();
-        ref.set({email: email, name: firstPartOfEmail(email)}, function(err) {
+       // var ref = Ref.child('users', user.uid), def = $q.defer();
+        var ref = Ref.child('users').child(user.uid), def = $q.defer();
+        ref.set({email: email, name: firstPartOfEmail(email), fname: fname}, function(err) {
           $timeout(function() {
             if( err ) {
               def.reject(err);

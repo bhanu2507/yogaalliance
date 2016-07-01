@@ -17,9 +17,11 @@ angular.module('yogafireApp')
 
 
    // var profile = $firebaseObject(Ref.child('users/'+user.uid));
-    var profile = $firebaseObject(Ref.child('users/' + user.uid));
+   // var profile = $firebaseObject(Ref.child('users/' + user.uid));
+    var profile = $firebaseObject(Ref.child('users').child(user.uid));
     profile.$bindTo($scope, 'profile');
-   // console.log(profile.email);
+    console.log(profile);
+
 
     $scope.changePassword = function(oldPass, newPass, confirm) {
       $scope.err = null;
