@@ -137,11 +137,17 @@ body a{
      	border-top:none;
      }
  }
+.carousel-inner .item > img {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
 /*--banner--*/
 .banner {
 	background: url(../images/banner.jpg) no-repeat 0px 0px;
-	min-height: 580px;
-	background-size: 100% 100%;
+/*--	min-height: 580px;
+	background-size: 100% 100%;--*/
+  align-content: center;
 }
 .banner-info {
 	margin-top:8em;
