@@ -137,10 +137,13 @@ body a{
      	border-top:none;
      }
  }
+.carousel-inner {
+  background-color: #fafaf8;
+}
 .carousel-inner .item > img {
   display: block;
   margin: auto;
-  width: 40%;
+  width: 60%;
 }
 /*--banner--*/
 .banner {
