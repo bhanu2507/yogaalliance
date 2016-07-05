@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>School Registration</h2>
+
+  <form role="form" novalidate ng-submit="createSchool()">
+    <p class="form-group">
+      <label for="schoolName">Name of Organisation/School</label>
+      <input id="schoolName" required name="schoolName" type="text" ng-model="schoolName" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="ownerName">Owner/Director Name</label>
+      <input id="ownerName" required name="ownerName" type="text" ng-model="ownerName" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="qualify">Qualifications</label>
+      <input id="qualify" required name="qualify" type="text" ng-model="qualify" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" ng-model="address" class="form-control" />
+    </p>
+    <div class="form-inline">
+      <p class="form-group">
+      <label for="TandC">Town and county</label>
+      <input id="TandC" name="TandC" type="text" ng-model="TandC" class="form-control" />
+      </p>
+      <p class="form-group">
+      <label for="postCode">Post Code</label>
+      <input id="postCode" name="postCode" type="text" ng-model="postCode" class="form-control" />
+      </p>
+      <p class="form-group">
+        <label for="tel">Tel</label>
+        <input id="tel" name="tel" type="text" ng-model="tel" class="form-control" />
+      </p>
+      <p class="form-group">
+        <label for="fax">Fax</label>
+        <input id="fax" name="fax" type="text" ng-model="fax" class="form-control" />
+      </p>
+    </div>
+    <p class="form-group">
+      <label for="email">Main Contact Email</label>
+      <input id="email" name="email" type="text" ng-model="email" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="website">Web adress</label>
+      <input id="website" name="website" type="text" ng-model="website" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="desc">A brief description of what you offer at your centre</label>
+      <textarea id="desc" name="desc" rows="6" ng-model="desc" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="youtubelink">YouTube link (if any)</label>
+      <input id="youtubelink" name="youtubelink" type="text" ng-model="youtubelink" class="form-control" />
+    </p>
+    <p class="form-group">
+      <label for="logo">Your Center Logo (if any)</label>
+      <input id="logo" name="logo" type="file" ng-model="logo" class="form-control" />
+    </p>
+    <p>
+      <button  class="btn btn-default">Register</button>
+      <button  class="btn btn-default">Cancel</button>
+    </p>
+  </form>
+  <p ng-show="err" class="bg-danger">{{err}}</p>
+</div>

@@ -70,6 +70,10 @@ angular.module('yogafireApp')
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/schoolreg', {
+        templateUrl: 'views/schoolreg.html',
+        controller: 'SchoolRegCtrl'
+      })
       .whenAuthenticated('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
